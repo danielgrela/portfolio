@@ -1,11 +1,18 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
+import ProfileHero from '../components/ProfileHero.astro';
+import Content from '../components/Content.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div class="justify-center gap-10 flex flex-col xl:flex-row h-full w-full overflow-hidden">
+		<div class="xl:w-[40%] flex justify-center items-center">
+			<ProfileHero />
+		</div>
+		<div class="xl:w-[60%] overflow-y-auto">
+			<Content />
+		</div>
+	</div>
 </Layout>
