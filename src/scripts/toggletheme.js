@@ -1,21 +1,57 @@
-var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+const themeLightBtn = document.getElementById('theme-light');
+const themeDarkBtn = document.getElementById('theme-dark');
+const themeBeachBtn = document.getElementById('theme-beach');
+const bodyElement = document.body;
 
-// Change the icons inside the button based on previous settings
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    themeToggleLightIcon.classList.remove('hidden');
-} else {
-    themeToggleDarkIcon.classList.remove('hidden');
+const beachImageUrl = "url('https://miviaje.com/wp-content/uploads/2020/04/playa-caleta-cadiz.jpg')";
+
+function setGradientBackground() {
+    bodyElement.style.backgroundImage = '';
+    localStorage.setItem('background-mode', 'default');
 }
 
-var themeDarkBtn = document.getElementById('theme-dark');
-var themeLightBtn = document.getElementById('theme-light');
+function setBeachBackground() {
+    bodyElement.style.backgroundImage = beachImageUrl;
+    bodyElement.style.backgroundSize = "cover";
+    bodyElement.style.backgroundPosition = "center";
+    bodyElement.style.backgroundRepeat = "no-repeat";
+    bodyElement.style.backgroundAttachment = "fixed";
+    localStorage.setItem('background-mode', 'beach');
+}
 
-themeDarkBtn.addEventListener('click', function() {
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('color-theme', 'dark');
-});
-themeLightBtn.addEventListener('click', function() {
+function setLightMode() {
     document.documentElement.classList.remove('dark');
     localStorage.setItem('color-theme', 'light');
-});
+}
+
+function setDarkMode() {
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('color-theme', 'dark');
+}
+
+// Check de la playa
+const savedBg = localStorage.getItem('background-mode');
+if (savedBg === 'beach') {
+    setBeachBackground();
+} 
+
+if (themeLightBtn) {
+    themeLightBtn.addEventListener('click', function() {
+        setLightMode();
+        setGradientBackground();
+    });
+}
+
+if (themeDarkBtn) {
+    themeDarkBtn.addEventListener('click', function() {
+        setDarkMode();
+        setGradientBackground();
+    });
+}
+
+if (themeBeachBtn) {
+    themeBeachBtn.addEventListener('click', function() {
+        setLightMode();
+        setBeachBackground();
+    });
+}
