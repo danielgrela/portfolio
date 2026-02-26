@@ -1,17 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ProfileHero from '../components/ProfileHero.astro';
+
 import Content from '../components/Content.astro';
+import Hero from '../components/Hero.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
 	<div class="flex flex-col md:flex-row h-full w-full overflow-y-auto md:overflow-hidden pb-8 md:pb-0">
-		<div class="w-full md:w-[50%] flex justify-center items-center md:h-full p-4">
-			<ProfileHero />
-		</div>
-		<div class="w-full md:w-[50%] md:h-full md:overflow-y-scroll no-scrollbar p-4">
+		<Hero />
+		<div class="w-full md:w-[50%] xl:w-[60%] md:h-full md:overflow-y-scroll no-scrollbar p-4 md:scroll-smooth">
 			<Content />
 		</div>
 	</div>
