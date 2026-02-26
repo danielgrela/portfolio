@@ -9,16 +9,16 @@ import ToggleThemeButtons from './toggleThemeButtons.astro';
 const images = [fotolinked.src, github.src, risa.src, mario.src, halloween.src];
 ---
 <div class="flex flex-col gap-4 items-center">
-    <div class="flex flex-col xl:flex-row gap-2 xl:gap-8 items-center ">
+    <div class="flex flex-col md:flex-row gap-2 xl:gap-8 items-center ">
         <div class="flex flex-col gap-2 shrink-0 mx-2">
             <img id="profile-image" src={fotolinked.src} alt="Coleccion de fotos de perfil" 
-            class="rounded-full object-cover cursor-pointer size-32 md:size-64 xl:size-32 shadow-lg border-4 border-gray-300 dark:border-gray-800"
+            class="rounded-full object-cover cursor-pointer size-32 shadow-lg border-4 border-gray-300 dark:border-gray-800"
             data-images={JSON.stringify(images)}>
             <p class="text-sm text-gray-500 text-center font-bold">¡Conoceme más! ↑</p>
         </div>
         <div class="gap-4 flex flex-col">
-            <h1 class="text-6xl font-bold ">¡Hola, soy Daniel!</h1>
-            <p class="text-lg w-full">Actualmente estoy estudiando el doble grado en <strong class="text-orange-500 dark:text-orange-300">Ingenieria Informatica y Administracion de Empresas</strong> en la URJC. Al mismo tiempo, estoy aprendiendo FrontEnd por mi cuenta haciendo bootcamps, probando y fallando. Actualmente estoy probando sin parar a hacer pruebas con <strong class="text-orange-500 dark:text-orange-300">Astro, TypeScript, Tailwind y React </strong></p>     
+            <h1 class="text-4xl xl:text-6xl font-bold ">¡Hola, soy Daniel!</h1>
+            <p class="text-md xl:text-lg w-full">Actualmente estoy estudiando el doble grado en <strong class="text-orange-500 dark:text-orange-300">Ingenieria Informatica y Administracion de Empresas</strong> en la URJC. Al mismo tiempo, estoy aprendiendo FrontEnd por mi cuenta haciendo bootcamps, probando y fallando. Actualmente estoy probando sin parar a hacer pruebas con <strong class="text-orange-500 dark:text-orange-300">Astro, TypeScript, Tailwind y React </strong></p>     
         </div>
     </div>
     <div class="w-full flex flex-row justify-around xl:justify-between xl:px-3">
