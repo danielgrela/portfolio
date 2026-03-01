@@ -6,14 +6,15 @@ import mario from '../assets/ProfilePics/mario.jpg';
 import halloween from '../assets/ProfilePics/halloween.jpg';
 import SocialMedia from './socialmedia.astro';
 import ToggleThemeButtons from './toggleThemeButtons.astro';
+import { Image } from "astro:assets";
 const images = [fotolinked.src, github.src, risa.src, mario.src, halloween.src];
 ---
 <div class="flex flex-col gap-4 items-center">
     <div class="flex flex-col md:flex-row gap-2 xl:gap-8 items-center ">
         <div class="flex flex-col gap-2 shrink-0 mx-2 md:self-start">
-            <img id="profile-image" src={fotolinked.src} alt="Coleccion de fotos de perfil" 
+            <Image id="profile-image" src={fotolinked} alt="Coleccion de fotos de perfil" 
             class="rounded-full object-cover cursor-pointer size-32 shadow-lg border-4 border-gray-300 dark:border-gray-800"
-            data-images={JSON.stringify(images)}>
+            data-images={JSON.stringify(images)} loading="eager" fetchpriority="high" />
             <p class="text-sm text-gray-500 text-center font-bold">¡Conoceme más! ↑</p>
         </div>
         <div class="gap-4 flex flex-col">
