@@ -1,8 +1,14 @@
 ---
 import Conocimientos from "./Conocimientos.astro";
 import Formacion from "./Formacion.astro";
+
 ---
-<div id="content-container" class="w-full wrap-break-word overflow-hidden flex flex-col gap-8 md:py-10">
+
+<div id="content-container" class="w-full wrap-break-word overflow-hidden flex flex-col gap-8
+    md:[&>*:first-child]:mt-20 mb-10">
     <Formacion/>
+    <Conocimientos/>
+    <Conocimientos/>
+    <Conocimientos/>
     <Conocimientos/>
 </div>
