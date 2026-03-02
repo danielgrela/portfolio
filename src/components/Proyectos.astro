@@ -1,19 +1,41 @@
 ---
 import { Image } from "astro:assets";
-import mockupPortfolio from "../assets/mockups/mockupportfolio.jpg";
+import mockupPortfolioLight from "../assets/mockups/mockupportfoliolight.jpg";
+import mockupPortfolioDark from "../assets/mockups/mockupportfoliodark.jpg";
+import mockupphones from "../assets/mockups/mockupphones.jpg";
+import ProyectoCard from "./ProyectoCard.astro";
+import Pill from "./Pill.astro";
 ---
 
 <section id="Proyectos" class="w-full wrap-break-word overflow-hidden text-start">
     <h2 class="text-2xl xl:text-3xl font-bold mb-4">PROYECTOS</h2>
-    <ol class="relative mx-5 gap-4 flex flex-col">                  
-        <li class="flex flex-col gap-3">            
-            <Image src={mockupPortfolio} alt="Imagen del portfolio" class=" w-full md:w-2/3 h-auto rounded-md border-2 border-default-medium" />
-            <h3 class="text-xl font-semibold">Portfolio Personal</h3>
-            <p class="text-body">Proyecto de portfolio personal para tener todo en un solo lugar. El código está disponible completo en GitHub con todos los commits, y será actualizado periódicamente según avance en el tiempo.</p>
-            <a href="https://github.com/danielgrela/portfolio" target="_blank" class="w-fit group relative inline-flex items-center md:pl-4 text-heading font-medium">
-    <span class="hidden absolute md:block left-0 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">&gt;</span>
-    <span class="underline md:no-underline">Ver repositorio</span>
-</a>
-        </li>
+    <ol class="relative mx-5 gap-6 flex flex-col">  
+        <ProyectoCard 
+            srcLight={mockupPortfolioLight}
+            srcDark={mockupPortfolioDark}
+            title="Portfolio Personal" 
+            description="Proyecto de portfolio personal para tener todo en un solo lugar. El código está disponible completo en GitHub con todos los commits, y será actualizado periódicamente según avance en el tiempo."
+            link="https://github.com/danielgrela/portfolio"
+        >
+        <div class="flex flex-row justify-start gap-2 flex-wrap">
+            <Pill>Astro</Pill>
+            <Pill>Tailwind CSS</Pill>
+            <Pill>JavaScript</Pill>
+        </div>
+        </ProyectoCard>
+        <ProyectoCard 
+            src={mockupphones} 
+            title="Highlights (Proyecto móvil cancelado)" 
+            description="Proyecto cancelado de aplicación móvil en Expo para practicar React Native y Nativewind. El repositorio contiene un estado inacabado del proyecto, sin muchas funcionalidades inacabadas, pero con el código base y las reglas de Firebase para que se pueda clonar y comprobar su estado. Entrando en el artículo se extiende la explicación del proyecto y su estado actual." 
+            link="https://github.com/danielgrela/prueba-movil"
+        >
+        <div class="flex flex-row justify-start gap-2 flex-wrap">
+            <Pill>Expo</Pill>
+            <Pill>React Native</Pill>
+            <Pill>TypeScript</Pill>
+            <Pill>Tailwind CSS</Pill>
+            <Pill>Firebase</Pill>
+        </div>
+        </ProyectoCard>
     </ol>
 </section>
