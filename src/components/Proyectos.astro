@@ -1,22 +1,25 @@
 ---
-import { Image } from "astro:assets";
 import mockupPortfolioLight from "../assets/mockups/mockupportfoliolight.jpg";
 import mockupPortfolioDark from "../assets/mockups/mockupportfoliodark.jpg";
 import mockupphones from "../assets/mockups/mockupphones.jpg";
 import ProyectoCard from "./ProyectoCard.astro";
 import Pill from "./Pill.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="Proyectos" class="w-full wrap-break-word overflow-hidden text-start">
-    <h2 class="text-2xl xl:text-3xl font-bold mb-4">PROYECTOS</h2>
+    <h2 class="text-2xl xl:text-3xl font-bold mb-4">{t('proyectos.title')}</h2>
     <ol class="relative mx-5 gap-6 flex flex-col">  
         <ProyectoCard 
             srcLight={mockupPortfolioLight}
             srcDark={mockupPortfolioDark}
-            title="Portfolio Personal" 
-            description="Proyecto de portfolio personal para tener todo en un solo lugar. El código está disponible completo en GitHub con todos los commits, y será actualizado periódicamente según avance en el tiempo."
+            title={t('proyectos.portfolio.title')}
+            description={t('proyectos.portfolio.description')}
             linkProyecto="https://github.com/danielgrela/portfolio"
             linkRepo="https://github.com/danielgrela/portfolio"
+            textoProyecto={t('proyectos.portfolio.link')}
         >
         <div class="flex flex-row justify-start gap-2 flex-wrap">
             <Pill>Astro</Pill>
@@ -26,9 +29,10 @@ import Pill from "./Pill.astro";
         </ProyectoCard>
         <ProyectoCard 
             src={mockupphones} 
-            title="Highlights (Proyecto móvil cancelado)" 
-            description="Proyecto cancelado de aplicación móvil en Expo para practicar React Native y Nativewind. El repositorio contiene un estado inacabado del proyecto, sin muchas funcionalidades inacabadas, pero con el código base y las reglas de Firebase para que se pueda clonar y comprobar su estado. Entrando en el artículo se extiende la explicación del proyecto y su estado actual." 
+            title={t('proyectos.highlights.title')}
+            description={t('proyectos.highlights.description')}
             linkRepo="https://github.com/danielgrela/highlights"
+            textoProyecto={t('proyectos.highlights.link')}
         >
         <div class="flex flex-row justify-start gap-2 flex-wrap">
             <Pill>Expo</Pill>

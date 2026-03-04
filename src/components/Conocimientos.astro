@@ -1,19 +1,22 @@
 ---
 import Pill from './Pill.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="Conocimientos" class="w-full wrap-break-word overflow-hidden text-start scroll-mt-52">
-    <h2 class="text-2xl xl:text-3xl font-bold mb-4">CONOCIMIENTOS</h2>
+    <h2 class="text-2xl xl:text-3xl font-bold mb-4">{t('conocimientos.title')}</h2>
     <div class="mx-5 flex flex-col gap-2">
         <div class="flex flex-col gap-1">
-            <h3 class="text-sm xl:text-md font-semibold text-gray-500">Idiomas</h3>
+            <h3 class="text-sm xl:text-md font-semibold text-gray-500">{t('conocimientos.idiomas')}</h3>
             <div class="flex flex-wrap gap-2">
-                <Pill>Inglés B2</Pill>
-                <Pill>Francés B2</Pill>
+                <Pill>{t('conocimientos.idiomas.ingles')}</Pill>
+                <Pill>{t('conocimientos.idiomas.frances')}</Pill>
             </div>
         </div>
         <div class="flex flex-col gap-1">
-            <h3 class="text-sm xl:text-md font-semibold text-gray-500">FrontEnd</h3>
+            <h3 class="text-sm xl:text-md font-semibold text-gray-500">{t('conocimientos.frontend')}</h3>
             <div class="flex flex-wrap gap-2">
                 <Pill>Astro</Pill>
                 <Pill>Tailwind CSS</Pill>
@@ -22,14 +25,14 @@ import Pill from './Pill.astro';
             </div>
         </div>
         <div class="flex flex-col gap-1">
-            <h3 class="text-sm xl:text-md font-semibold text-gray-500">Móvil</h3>
+            <h3 class="text-sm xl:text-md font-semibold text-gray-500">{t('conocimientos.movil')}</h3>
             <div class="flex flex-wrap gap-2">
                 <Pill>React Native</Pill>
                 <Pill>Expo</Pill>
             </div>
         </div>
         <div class="flex flex-col gap-1">
-            <h3 class="text-sm xl:text-md font-semibold text-gray-500">Software y Sistemas</h3>
+            <h3 class="text-sm xl:text-md font-semibold text-gray-500">{t('conocimientos.software')}</h3>
             <div class="flex flex-wrap gap-2">
                 <Pill>C</Pill>
                 <Pill>Java</Pill>

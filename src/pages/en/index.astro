@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import Content from '../../components/Content.astro';
+import Hero from '../../components/Hero.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+---
+
+
+{/* Los MT del Hero y content estan correspondientemente en sus secciones para permitir cambios a futuro */}
+<Layout>
+	<div class="gap-8 flex flex-col md:flex-row h-full w-full overflow-y-auto md:overflow-hidden pb-8 md:pb-0">
+		<Hero />
+		<div class="w-full lg:w-[40%] xl:w-[60%] md:h-full md:overflow-y-scroll no-scrollbar md:scroll-smooth">
+			<Content />
+		</div>
+	</div>
+    <div class="absolute bottom-8 left-8 hidden md:block">
+		<LanguageSwitcher />
+	</div>
+</Layout>

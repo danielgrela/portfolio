@@ -1,0 +1,35 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+
+const pathWithoutLang = currentPath.replace(/^\/(es|en)/, '') || '/';
+const langEntries = Object.entries(languages);
+---
+
+<div class="flex gap-2">
+  {langEntries.map(([langCode, langName], index) => {
+    const href = langCode === 'es' ? `/es${pathWithoutLang}` : `/en${pathWithoutLang}`;
+    const isActive = lang === langCode;
+    
+    return (
+      <>
+        <a 
+          href={href}
+          class:list={[
+            "px-1 py-1 text-md rounded hover:text-body text-heading",
+            isActive 
+              ? " font-bold" 
+              : ""
+          ]}
+          aria-label={`Switch to ${langName}`}
+        >
+          {langCode.toUpperCase()}
+        </a>
+        {index < langEntries.length - 1 && <span class="text-md text-heading self-center cursor-default">|</span>}
+      </>
+    );
+  })}
+</div>
