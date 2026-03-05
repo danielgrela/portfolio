@@ -9,7 +9,7 @@ const pathWithoutLang = currentPath.replace(/^\/(es|en)/, '') || '/';
 const langEntries = Object.entries(languages);
 ---
 
-<div class="flex gap-2">
+<div class="flex gap-2 md:gap-3 items-center text-center">
   {langEntries.map(([langCode, langName], index) => {
     const href = langCode === 'es' ? `/es${pathWithoutLang}` : `/en${pathWithoutLang}`;
     const isActive = lang === langCode;
@@ -19,16 +19,16 @@ const langEntries = Object.entries(languages);
         <a 
           href={href}
           class:list={[
-            "px-1 py-1 text-md rounded hover:text-body text-heading",
+            "text-sm md:text-md rounded hover:text-body text-heading",
             isActive 
-              ? " font-bold" 
+              ? "font-bold" 
               : ""
           ]}
           aria-label={`Switch to ${langName}`}
         >
           {langCode.toUpperCase()}
         </a>
-        {index < langEntries.length - 1 && <span class="text-md text-heading self-center cursor-default">|</span>}
+        {index < langEntries.length - 1 && <span class="text-md md:text-lg text-heading cursor-default">|</span>}
       </>
     );
   })}
