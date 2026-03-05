@@ -1,0 +1,51 @@
+---
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import SocialMediaBlog from '../components/SocialMediaBlog.astro';
+import ToggleThemeButtons from '../components/ToggleThemeButtons.astro';
+import { getLangFromUrl } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang={lang} class="scroll-smooth min-h-dvh bg-linear-to-tl from-gray-50 to-gray-150 dark:from-gray-950 dark:to-gray-900 ">
+    <head>
+        <script is:inline>
+            //Detectar tema del navegador
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Daniel Grela</title>
+    </head>
+    <body class="min-h-dvh flex flex-col items-center text-start text-heading">
+        <div class="w-full items-center md:w-1/2 flex flex-col flex-1 py-4 px-8 md:px-0">
+            <header class="text-md text-center font-medium justify-between border-body w-full flex flex-row">
+                <a href="/" class="hover:text-body cursor-pointer">&larr; Regresar</a>
+                <ToggleThemeButtons />
+            </header>
+            <div class="w-full [&>section]:pb-4 [&>section]:mb-4 [&>section]:md:mb-6">
+                <slot />
+            </div>
+            <footer class="mt-auto text-md text-center font-medium justify-between border-t py-2 mb-6 md:mb-0 border-body w-full flex flex-row">
+                <p>Daniel Grela</p>
+                <SocialMediaBlog />
+                <LanguageSwitcher />
+            </footer>
+        </div>
+    </body>
+</html>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+    }
+</style>

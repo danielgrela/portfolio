@@ -1,0 +1,46 @@
+---
+import Focus from "../../../components/Focus.astro"
+import LayoutBlog from '../../../layouts/LayoutBlog.astro';
+import { Image } from 'astro:assets';
+import mockupImage from '../../../assets/mockups/mockupphones.jpg';
+---
+<LayoutBlog>
+	<!-- PORTADA -->
+	<section class="w-full">
+		<h1 class="text-3xl md:text-4xl font-bold mb-3">¿Por qué cancelé mi primer gran proyecto?</h1>
+		<p class="text-body mb-2">5 de Marzo de 2026</p>
+		<p class="text-heading font-medium mb-8">Una reflexión sobre las decisiones, desafíos y aprendizajes que surgieron al abandonar Highlights, mi ambicioso proyecto de aplicación móvil en Expo y React Native. Descubre qué me llevó a tomar esta decisión y qué lecciones me dejó esta experiencia.</p>
+		<Image src={mockupImage} alt="Portada del proyecto Highlights" class="w-full rounded-md" />
+	</section>
+
+	<!-- SECCIÓN 1: EL COMIENZO -->
+	<section class="w-full border-b border-gray-300 dark:border-gray-800 gap-4 flex flex-col">
+		<h2 class="text-2xl md:text-3xl font-bold">El Comienzo de Highlights</h2>
+		<p class="text-heading">Todo comenzó con una idea simple, para practicar mis habilidades en el desarrollo móvil: <Focus>un "look a like" de BeReal</Focus>, donde los usuarios publicasen una foto en cualquier momento de su día, y vieran las de sus amigos. La visión era clara y la motivación me tuvo semanas trabajando día a día. </p>
+		<p class="text-heading">Desde el inicio estaba claro, sería <Focus>un proyecto con React Native y Expo </Focus>, lenguajes que había aprendido recientemente, y quería meterle Tailwind para practicar, cosa que conseguí con Nativewind. La idea también tenia una cosa clara, empezaría haciendo los skeleton de la aplicación y después pasaría al backend, para así poder mostrar imagenes en caso de cancelar el proyecto. Esta fue, posiblemente la mejor decisión, pues si no no podría estar escribiendo esto. </p>
+	</section>
+
+	<!-- SECCIÓN 2: LOS DESAFÍOS -->
+	<section class="w-full border-b border-gray-300 dark:border-gray-800 gap-4 flex flex-col">
+		<h2 class="text-2xl md:text-3xl font-bold">Los Desafíos Técnicos</h2>
+		<p class="text-heading">Cuando empecé, no sabía nada de Firebase, en la universidad me habían enseñado SQL, donde me desempeñaba muy bien, pero <Focus>Firebase está basado en NoSQL</Focus>, lo que me dejaba sabiendo solo las bases del diseño de BBDD. Aún así, a base de videos, cursos, y leer la documentación, acabe pudiendo hacer una base de datos solida, optimizada, y con reglas que no dejaban opción a intrusos a dar un mal uso de la aplicación.</p>
+		<p class="text-heading">Tuve que aprender un montón de nuevas bibliotecas para Expo, como <Focus>i18n, ImagePicker, o Moti </Focus>, con lo que implementé los skeleton para aumentar el rendimiento de la aplicación frente a animaciones propias.</p>
+		<p class="text-heading">Mientras tenía dudas de si esta aplicación solo era un capricho, o si tenía potencial para convertirse en algo más, las necesidades de nuevas tecnologías y su implementación comenzaron a volverse un desmotivante</p>
+	</section>
+
+	<!-- SECCIÓN 4: LA DECISIÓN DE CANCELAR -->
+	<section class="w-full border-b border-gray-300 dark:border-gray-800 gap-4 flex flex-col">
+		<h2 class="text-2xl md:text-3xl font-bold">La Decisión de Cancelar</h2>
+		<p class="text-heading">Cancelar una proyecto en el que había invertido tanto tiempo y energía no fue fácil. Hubo una sensación de fracaso inicial, de haber "dejado tirado" algo que comencé con tanta ilusión. Sin embargo, gradualmente, entendí que esta decisión era la más responsable y honesta que podía tomar.</p>
+		<p class="text-heading">Acepté que no todos los proyectos deben ser completados. A veces, el aprendizaje está en el proceso, no en el resultado final.<Focus> Highlights me enseñó más sobre desarrollo móvil, Firebase, gestión de proyectos y mi limite frente a un "Burn Out".</Focus></p>
+		<p class="text-heading">Documenté el estado incompleto del proyecto, publiqué el código en GitHub y lo dejé disponible para posibles reclutadores que quieran echarle un ojo, y para tener un recuerdo.</p>
+	</section>
+
+	<!-- SECCIÓN 5: LECCIONES APRENDIDAS -->
+	<section class="w-full gap-4 flex flex-col">
+		<h2 class="text-2xl md:text-3xl font-bold">Lecciones para el Futuro</h2>
+		<p class="text-heading">Esta experiencia me dejó varias lecciones valiosas. La primera es que <Focus> menos es más.</Focus> No es necesario hacer un proyecto enorme, pues cuanto más tiempo tardes en hacerlo, más sencillo es cansarte de él.</p>
+		<p class="text-heading">La segunda es que <Focus>comunicar decisiones difíciles de forma clara es importante. </Focus> Dejé el proyecto documentado y accesible, lo que permitió que otros pudieran aprender de mi trabajo incompleto. No ocultarlo como un fracaso silencioso.</p>
+		<p class="text-heading">La tercera, y quizás la más importante, es que <Focus>los proyectos incompletos no son fracasos totales. </Focus>Highlights me dio experiencia, confianza en mis habilidades de aprendizaje autonomo, y la certeza de que soy capaz de construir cosas complejas. Eso tiene valor, incluso si el proyecto nunca se lanzó.</p>
+	</section>
+</LayoutBlog>

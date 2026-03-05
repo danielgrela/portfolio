@@ -1,0 +1,46 @@
+---
+import Focus from "../../../components/Focus.astro"
+import LayoutBlog from '../../../layouts/LayoutBlog.astro';
+import { Image } from 'astro:assets';
+import mockupImage from '../../../assets/mockups/mockupphones.jpg';
+---
+<LayoutBlog>
+	<!-- COVER -->
+	<section class="w-full">
+		<h1 class="text-3xl md:text-4xl font-bold mb-3">Why did I cancel my first big project</h1>
+		<p class="text-body mb-2">March 5, 2026</p>
+		<p class="text-heading font-medium mb-8">A reflection on the decisions, challenges, and lessons that emerged when I walked away from Highlights, my ambitious mobile app project built with Expo and React Native. Here is what led me to make that decision and what this experience taught me.</p>
+		<Image src={mockupImage} alt="Highlights project cover" class="w-full rounded-md" />
+	</section>
+
+	<!-- SECTION 1: THE BEGINNING -->
+	<section class="w-full border-b border-gray-300 dark:border-gray-800 gap-4 flex flex-col">
+		<h2 class="text-2xl md:text-3xl font-bold">The Beginning of Highlights</h2>
+		<p class="text-heading">It all started with a simple idea to practice my mobile development skills: <Focus>a BeReal look-alike</Focus>, where users could post a photo at any point in their day and see their friends' posts. The vision was clear, and the motivation kept me working on it day after day for weeks.</p>
+		<p class="text-heading">From the start, it was clear that it would be <Focus>a React Native and Expo project</Focus>, technologies I had learned recently. I also wanted to add Tailwind for practice, which I achieved with Nativewind. I had one more clear idea: I would first build the app skeleton screens and then move on to the backend, so I could still show images if I ended up canceling the project. That was probably my best decision, because otherwise I would not be writing this today.</p>
+	</section>
+
+	<!-- SECTION 2: THE CHALLENGES -->
+	<section class="w-full border-b border-gray-300 dark:border-gray-800 gap-4 flex flex-col">
+		<h2 class="text-2xl md:text-3xl font-bold">Technical Challenges</h2>
+		<p class="text-heading">When I started, I knew nothing about Firebase. At university I had learned SQL, where I performed very well, but <Focus>Firebase is based on NoSQL</Focus>, so I only had the fundamentals of database design. Even so, through videos, courses, and documentation, I eventually built a solid, optimized database with rules that prevented misuse by bad actors.</p>
+		<p class="text-heading">I had to learn many new Expo libraries, such as <Focus>i18n, ImagePicker, and Moti</Focus>, which I used to implement skeleton screens and improve perceived performance compared to custom animations.</p>
+		<p class="text-heading">As I kept wondering whether this app was just a whim or had real potential to become something bigger, the growing need to learn and implement new technologies started to feel demotivating.</p>
+	</section>
+
+	<!-- SECTION 4: THE DECISION TO CANCEL -->
+	<section class="w-full border-b border-gray-300 dark:border-gray-800 gap-4 flex flex-col">
+		<h2 class="text-2xl md:text-3xl font-bold">The Decision to Cancel</h2>
+		<p class="text-heading">Canceling a project where I had invested so much time and energy was not easy. At first, it felt like failure, like I had abandoned something I started with so much excitement. But gradually, I understood that this was the most responsible and honest decision I could make.</p>
+		<p class="text-heading">I accepted that not every project has to be finished. Sometimes, the learning is in the process, not the final result. <Focus>Highlights taught me more about mobile development, Firebase, project management, and my limits when facing burnout.</Focus></p>
+		<p class="text-heading">I documented the incomplete state of the project, published the code on GitHub, and left it available for potential recruiters who might want to take a look, and also as a personal record.</p>
+	</section>
+
+	<!-- SECTION 5: LESSONS LEARNED -->
+	<section class="w-full gap-4 flex flex-col">
+		<h2 class="text-2xl md:text-3xl font-bold">Lessons for the Future</h2>
+		<p class="text-heading">This experience left me with several valuable lessons. The first is that <Focus>less is more.</Focus> You do not need to build a massive project, because the longer it takes, the easier it is to burn out and lose momentum.</p>
+		<p class="text-heading">The second is that <Focus>communicating difficult decisions clearly is important.</Focus> I left the project documented and accessible, which allowed others to learn from my unfinished work, instead of hiding it as a silent failure.</p>
+		<p class="text-heading">The third, and maybe the most important, is that <Focus>unfinished projects are not total failures.</Focus> Highlights gave me experience, confidence in my self-learning skills, and the certainty that I can build complex things. That has value, even if the project was never launched.</p>
+	</section>
+</LayoutBlog>
