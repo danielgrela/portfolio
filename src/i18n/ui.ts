@@ -51,6 +51,7 @@ export const ui = {
     'ResumirIA.copiar': 'Click to copy the prompt',
     'ResumirIA.mandar': 'Click to send the prompt',
     'ResumirIA.prompt': 'Summarize the following article:',
+    'ResumirIA.exito': 'Text copied, please wait...',
     },
     es: {
     // Navigation
@@ -97,5 +98,6 @@ export const ui = {
     'ResumirIA.copiar': 'Click para copiar el prompt',
     'ResumirIA.mandar': 'Click para enviar el prompt',
     'ResumirIA.prompt': 'Resume el siguiente articulo:',
+    'ResumirIA.exito': 'Texto copiado, espere...',
     },
 } as const;
