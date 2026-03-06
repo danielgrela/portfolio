@@ -46,6 +46,11 @@ export const ui = {
     'proyectos.highlights.title': 'Highlights (Cancelled mobile project)',
     'proyectos.highlights.description': 'Cancelled mobile application project in Expo to practice React Native and Nativewind. The repository contains an unfinished state of the project, without many unfinished features, but with the base code and Firebase rules so that it can be cloned and checked its status. Entering the article extends the explanation of the project and its current state.',
     'proyectos.highlights.link': 'Read article',
+    //Blog
+    'ResumirIA.title': 'Summarize with:',
+    'ResumirIA.copiar': 'Click to copy the prompt',
+    'ResumirIA.mandar': 'Click to send the prompt',
+    'ResumirIA.prompt': 'Summarize the following article:',
     },
     es: {
     // Navigation
@@ -87,5 +92,10 @@ export const ui = {
     'proyectos.highlights.title': 'Highlights (Proyecto móvil cancelado)',
     'proyectos.highlights.description': 'Proyecto cancelado de aplicación móvil en Expo para practicar React Native y Nativewind. El repositorio contiene un estado inacabado del proyecto, sin muchas funcionalidades inacabadas, pero con el código base y las reglas de Firebase para que se pueda clonar y comprobar su estado. Entrando en el artículo se extiende la explicación del proyecto y su estado actual.',
     'proyectos.highlights.link': 'Leer artículo',
+    //Blog
+    'ResumirIA.title': 'Resume con:',
+    'ResumirIA.copiar': 'Click para copiar el prompt',
+    'ResumirIA.mandar': 'Click para enviar el prompt',
+    'ResumirIA.prompt': 'Resume el siguiente articulo:',
     },
 } as const;
