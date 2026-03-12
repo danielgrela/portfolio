@@ -1,7 +1,7 @@
 ---
 import BlogCard from "./BlogCard.astro";
-import mockupphones from "../assets/mockups/mockupphones.jpg";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import mockupphones from "../../assets/mockups/mockupphones.jpg";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
