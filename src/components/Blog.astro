@@ -1,0 +1,21 @@
+---
+import BlogCard from "./BlogCard.astro";
+import mockupphones from "../assets/mockups/mockupphones.jpg";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="Blog" class="w-full wrap-break-word overflow-hidden text-start">
+    <h2 class="text-2xl xl:text-3xl font-bold mb-4">BLOG</h2>
+    <ol class="relative mx-5 gap-6 flex flex-col">  
+        <BlogCard 
+            src={mockupphones} 
+            title={t('blog.titles.highlights')}
+            description={t('blog.description.highlights')}
+            link="/blog/por-que-cancele-mi-primer-gran-proyecto/"
+            date="2026-03-05"
+        >
+    </BlogCard>
+    </ol>
+</section>

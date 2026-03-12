@@ -52,6 +52,10 @@ export const ui = {
     'ResumirIA.mandar': 'Click to send the prompt',
     'ResumirIA.prompt': 'Summarize the following article:',
     'ResumirIA.exito': 'Text copied, please wait...',
+
+    //TITLES BLOG
+    'blog.titles.highlights': 'Why did I cancel my first big project?',
+    'blog.description.highlights': 'A reflection on the decisions, challenges, and lessons that emerged when I walked away from Highlights, my ambitious mobile app project built with Expo and React Native. Here is what led me to make that decision and what this experience taught me.',
     },
     es: {
     // Navigation
@@ -99,5 +103,10 @@ export const ui = {
     'ResumirIA.mandar': 'Click para enviar el prompt',
     'ResumirIA.prompt': 'Resume el siguiente articulo:',
     'ResumirIA.exito': 'Texto copiado, espere...',
+
+
+    //TITLES BLOG
+    'blog.titles.highlights': '¿Por qué cancelé mi primer gran proyecto?',
+    'blog.description.highlights': 'Una reflexión sobre las decisiones, desafíos y aprendizajes que surgieron al abandonar Highlights, mi ambicioso proyecto de aplicación móvil en Expo y React Native. Descubre qué me llevó a tomar esta decisión y qué lecciones me dejó esta experiencia.',
     },
 } as const;

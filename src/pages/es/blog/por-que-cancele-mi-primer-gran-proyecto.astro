@@ -4,13 +4,16 @@ import LayoutBlog from '../../../layouts/LayoutBlog.astro';
 import { Image } from 'astro:assets';
 import mockupImage from '../../../assets/mockups/mockupphones.jpg';
 import ResumirIA from '../../../components/ResumirIA.astro';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <LayoutBlog>
 	<!-- PORTADA -->
 	<section class="w-full">
-		<h1 class="text-3xl md:text-4xl font-bold mb-3">¿Por qué cancelé mi primer gran proyecto?</h1>
-		<p class="text-body mb-2">5 de Marzo de 2026</p>
-		<p class="text-heading font-medium mb-8">Una reflexión sobre las decisiones, desafíos y aprendizajes que surgieron al abandonar Highlights, mi ambicioso proyecto de aplicación móvil en Expo y React Native. Descubre qué me llevó a tomar esta decisión y qué lecciones me dejó esta experiencia.</p>
+		<h1 class="text-3xl md:text-4xl font-bold mb-3">{t('blog.titles.highlights')}</h1>
+		<p class="text-body mb-2">2026-03-05</p>
+		<p class="text-heading font-medium mb-8">{t('blog.description.highlights')}</p>
 		<Image src={mockupImage} alt="Portada del proyecto Highlights" class="w-full rounded-md mb-4" />
 		<ResumirIA />
 	</section>
