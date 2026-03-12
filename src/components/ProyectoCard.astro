@@ -31,7 +31,7 @@ interface ProyectoCardProps {
     linkProyecto: string;
 }
 ---
-<li class="flex flex-col gap-2 w-full 2xl:w-2/3">
+<li class="flex flex-col gap-2 w-full ">
     <a href={proyectoHref} target={proyectoTarget} class="relative group block rounded-md overflow-hidden border-2 border-default-medium cursor-pointer">
         <Image src={imageSrc} alt="Imagen del proyecto" class="dark:hidden w-full h-auto" />
         {imageSrcDark && <Image src={imageSrcDark} alt="Imagen del proyecto" class="hidden dark:block w-full h-auto" />}
