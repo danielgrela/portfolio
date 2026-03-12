@@ -1,20 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl } from "../../i18n/utils";
 
 const {title, description, date, link , src} = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
-const isExternalLink = link.startsWith('http://') || link.startsWith('https://');
-const proyectoTarget = isExternalLink ? '_blank' : undefined;
 
 let proyectoHref = link;
-if (!isExternalLink) {
-  if (!link.startsWith('/')) {
-    proyectoHref = `/${lang}/${link}`;
-  } else {
-    proyectoHref = `/${lang}${link}`;
-  }
+
+if (!link.startsWith('/')) {
+  proyectoHref = `/${lang}/${link}`;
+} else {
+  proyectoHref = `/${lang}${link}`;
 }
 
 interface ProyectoCardProps {
@@ -26,7 +23,7 @@ interface ProyectoCardProps {
 }
 ---
 <li class="w-full">
-    <a href={proyectoHref} target={proyectoTarget} class="w-full flex flex-col gap-2 transition-all duration-200 rounded-lg 
+    <a href={proyectoHref} class="w-full flex flex-col gap-2 transition-all duration-200 rounded-lg 
     hover:p-8 hover:bg-gray-200 dark:hover:bg-gray-800 active:p-8 active:bg-gray-200 dark:active:bg-gray-800">
         <Image src={src} alt="Imagen del proyecto" class="w-full h-auto rounded-md" />  
         <div class="flex flex-row gap-4 items-center text-center justify-between">

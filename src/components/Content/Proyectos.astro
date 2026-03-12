@@ -3,8 +3,8 @@ import mockupPortfolioLight from "../assets/mockups/mockupportfoliolight.jpg";
 import mockupPortfolioDark from "../assets/mockups/mockupportfoliodark.jpg";
 import mockupphones from "../assets/mockups/mockupphones.jpg";
 import ProyectoCard from "./ProyectoCard.astro";
-import Pill from "./Pill.astro";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Pill from "../Pill.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
