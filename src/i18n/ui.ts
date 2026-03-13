@@ -11,6 +11,7 @@ export const ui = {
     'nav.formacion': 'Education',
     'nav.conocimientos': 'Skills',
     'nav.proyectos': 'Projects',
+    'back': 'Back',
 
     // Hero Section
     'hero.greeting': "Hi, I'm Daniel!",
@@ -62,6 +63,7 @@ export const ui = {
     'nav.formacion': 'Formación',
     'nav.conocimientos': 'Conocimientos',
     'nav.proyectos': 'Proyectos',
+    'back': 'Regresar',
 
     // Hero Section
     'hero.greeting': '¡Hola, soy Daniel!',

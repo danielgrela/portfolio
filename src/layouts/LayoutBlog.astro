@@ -2,8 +2,10 @@
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import SocialMediaBlog from '../components/SocialMediaBlog.astro';
 import ToggleThemeButtons from '../components/ToggleThemeButtons.astro';
-import { getLangFromUrl } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const homePath = lang === 'en' ? '/en' : '/es';
 import '../styles/global.css';
 ---
 <!doctype html>
@@ -27,7 +29,7 @@ import '../styles/global.css';
     <body class="min-h-dvh flex flex-col items-center text-start text-heading">
         <div class="w-full items-center md:w-1/2 flex flex-col flex-1 py-4 px-8 md:px-0">
             <header class="text-md text-center items-center font-medium justify-between border-body w-full flex flex-row mb-2 ">
-                <a href="/" class="hover:text-body cursor-pointer">&larr; Regresar</a>
+                <a href={homePath} class="hover:text-body cursor-pointer">&larr; {t('back')}</a>
                 <ToggleThemeButtons />
             </header>
             <div class="w-full [&>section]:pb-4 [&>section]:mb-4 [&>section]:md:mb-6">
