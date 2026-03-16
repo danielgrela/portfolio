@@ -29,7 +29,7 @@ import '../styles/global.css';
     <body class="min-h-dvh flex flex-col items-center text-start text-heading">
         <div class="w-full items-center md:w-1/2 flex flex-col flex-1 py-4 px-8 md:px-0">
             <header class="text-md text-center items-center font-medium justify-between border-body w-full flex flex-row mb-2 ">
-                <a href={homePath} class="hover:text-body cursor-pointer">&larr; {t('back')}</a>
+                <a href={homePath} class="hover:text-body cursor-pointer flex flex-row gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-bar-to-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12l10 0" /><path d="M10 12l4 4" /><path d="M10 12l4 -4" /><path d="M4 4l0 16" /></svg> {t('back')}</a>
                 <ToggleThemeButtons />
             </header>
             <div class="w-full [&>section]:pb-4 [&>section]:mb-4 [&>section]:md:mb-6">
