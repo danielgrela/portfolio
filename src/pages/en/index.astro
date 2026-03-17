@@ -5,12 +5,10 @@ import Content from '../../components/Content/Content.astro';
 import Hero from '../../components/Hero/Hero.astro';
 ---
 
-
-{/* Los MT del Hero y content estan correspondientemente en sus secciones para permitir cambios a futuro */}
 <Layout>
-	<div class="gap-8 flex flex-col md:flex-row h-full w-full overflow-y-auto md:overflow-hidden pb-8 md:pb-0">
-		<Hero />
-		<div class="w-full lg:w-[40%] xl:w-[60%] md:h-full md:overflow-y-scroll no-scrollbar md:scroll-smooth">
+	<div class="gap-8 2xl:gap-16 flex flex-col md:flex-row h-full w-full overflow-y-auto md:overflow-hidden pb-8 md:pb-0">
+		<Hero classes="w-full shrink-0 md:w-[60%] xl:w-[40%] flex flex-col mt-10 md:mt-20 gap-4 2xl:gap-8" />
+		<div class="w-full md:flex-1 md:h-full md:overflow-y-scroll no-scrollbar md:scroll-smooth">
 			<Content />
 		</div>
 	</div>
