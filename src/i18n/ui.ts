@@ -11,6 +11,7 @@ export const ui = {
     'nav.formacion': 'Education',
     'nav.conocimientos': 'Skills',
     'nav.proyectos': 'Projects',
+    'nav.contacto': 'Contact',
     'back': 'Back',
 
     // Hero Section
@@ -47,12 +48,23 @@ export const ui = {
     'proyectos.highlights.title': 'Highlights (Cancelled mobile project)',
     'proyectos.highlights.description': 'Cancelled mobile application project in Expo to practice React Native and Nativewind. The repository contains an unfinished state of the project, without many unfinished features, but with the base code and Firebase rules so that it can be cloned and checked its status. Entering the article extends the explanation of the project and its current state.',
     'proyectos.highlights.link': 'Read article',
+
     //Blog
     'ResumirIA.title': 'Summarize with:',
     'ResumirIA.copiar': 'Click to copy the prompt',
     'ResumirIA.mandar': 'Click to send the prompt',
     'ResumirIA.prompt': 'Summarize the following article:',
     'ResumirIA.exito': 'Text copied, please wait...',
+
+    //Contacto
+    'contacto.title': 'Want to contact me?',
+    'contacto.form.asunto.title': 'Subject',
+    'contacto.form.asunto.placeholder': 'What do you want to talk about?',
+    'contacto.form.nombre.title': 'Name',
+    'contacto.form.nombre.placeholder': 'What is your name?',
+    'contacto.form.mensaje.title': 'Message',
+    'contacto.form.mensaje.placeholder': 'Write your message here...',
+    'contacto.form.submit': 'Open email client',
 
     //TITLES BLOG
     'blog.titles.highlights': 'Why did I cancel my first big project?',
@@ -63,6 +75,7 @@ export const ui = {
     'nav.formacion': 'Formación',
     'nav.conocimientos': 'Conocimientos',
     'nav.proyectos': 'Proyectos',
+    'nav.contacto': 'Contacto',
     'back': 'Regresar',
 
     // Hero Section
@@ -99,6 +112,17 @@ export const ui = {
     'proyectos.highlights.title': 'Highlights (Proyecto móvil cancelado)',
     'proyectos.highlights.description': 'Proyecto cancelado de aplicación móvil en Expo para practicar React Native y Nativewind. El repositorio contiene un estado inacabado del proyecto, sin muchas funcionalidades inacabadas, pero con el código base y las reglas de Firebase para que se pueda clonar y comprobar su estado. Entrando en el artículo se extiende la explicación del proyecto y su estado actual.',
     'proyectos.highlights.link': 'Leer artículo',
+    
+    //Contacto
+    'contacto.title': '¿Quieres contactarme?',
+    'contacto.form.asunto.title': 'Asunto',
+    'contacto.form.asunto.placeholder': '¿De qué quieres hablar?',
+    'contacto.form.nombre.title': 'Nombre',
+    'contacto.form.nombre.placeholder': '¿Cuál es tu nombre?',
+    'contacto.form.mensaje.title': 'Mensaje',
+    'contacto.form.mensaje.placeholder': 'Escribe tu mensaje aquí...',
+    'contacto.form.submit': 'Abrir cliente de correo',
+
     //Blog
     'ResumirIA.title': 'Resume con:',
     'ResumirIA.copiar': 'Click para copiar el prompt',
