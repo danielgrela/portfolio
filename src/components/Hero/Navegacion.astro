@@ -6,10 +6,10 @@ const t = useTranslations(lang);
 
 <ul class="hidden md:block self-end text-end w-48 text-sm font-medium text-body [&>li]:transition-[padding] [&>li]:duration-300">
   <li class="nav-link w-full px-4 py-2 hover:text-gray-700 dark:hover:text-gray-300 bg-linear-to-l via-90% dark:from-neutral-primary-soft dark:via-neutral-primary-soft/70 dark:to-black from-black/10 via-black/7 to-white"><a href="#Formacion" >{t('nav.formacion')}</a></li>
-  <li class="nav-link w-full px-4 py-2 hover:text-gray-700 dark:hover:text-gray-300 bg-linear-to-l via-90% dark:from-neutral-primary-soft dark:via-neutral-primary-soft/70 dark:to-black from-black/10 via-black/7 to-white"><a href="#Conocimientos" >{t('nav.conocimientos')}</a></li>
-  <li class="nav-link w-full px-4 py-2 hover:text-gray-700 dark:hover:text-gray-300 bg-linear-to-l via-90% dark:from-neutral-primary-soft dark:via-neutral-primary-soft/70 dark:to-black from-black/10 via-black/7 to-white"><a href="#Proyectos" >{t('nav.proyectos')}</a></li>
-  <li class="nav-link w-full px-4 py-2 hover:text-gray-700 dark:hover:text-gray-300 bg-linear-to-l via-90% dark:from-neutral-primary-soft dark:via-neutral-primary-soft/70 dark:to-black from-black/10 via-black/7 to-white"><a href="#Blog">Blog</a></li>
-  <li class="nav-link w-full px-4 py-2 hover:text-gray-700 dark:hover:text-gray-300 bg-linear-to-l via-90% dark:from-neutral-primary-soft dark:via-neutral-primary-soft/70 dark:to-black from-black/10 via-black/7 to-white"><a href="#Contacto" >{t('nav.contacto')}</a></li>
+  <li class="nav-link w-full px-4 py-2 hover:text-gray-700 dark:hover:text-gray-300"><a href="#Conocimientos" >{t('nav.conocimientos')}</a></li>
+  <li class="nav-link w-full px-4 py-2 hover:text-gray-700 dark:hover:text-gray-300"><a href="#Proyectos" >{t('nav.proyectos')}</a></li>
+  <li class="nav-link w-full px-4 py-2 hover:text-gray-700 dark:hover:text-gray-300"><a href="#Blog">Blog</a></li>
+  <li class="nav-link w-full px-4 py-2 hover:text-gray-700 "><a href="#Contacto" >{t('nav.contacto')}</a></li>
 </ul>  
 <script>
   function initScrollspy() {
@@ -26,11 +26,11 @@ const t = useTranslations(lang);
         if (entry.isIntersecting) {
           const activeId = entry.target.id;
           navItems.forEach(item => {
-            item.classList.remove('bg-linear-to-l', 'text-black', 'dark:text-white', 'font-bold', 'pr-10');
+            item.classList.remove('bg-linear-to-l', 'text-black', 'dark:text-white', 'font-bold', 'pr-10', 'dark:hover:text-gray-300', 'bg-linear-to-l', 'via-90%','dark:from-neutral-primary-soft', 'dark:via-neutral-primary-soft/70', 'dark:to-black', 'from-black/10', 'via-black/7', 'to-white');
             const anchor = item.querySelector('a');
             
             if (anchor?.getAttribute('href') === `#${activeId}`) {
-              item.classList.add('bg-linear-to-l', 'text-black', 'dark:text-white', 'font-bold',  'pr-10');
+              item.classList.add('bg-linear-to-l', 'text-black', 'dark:text-white', 'font-bold',  'pr-10',  'via-90%','dark:from-neutral-primary-soft', 'dark:via-neutral-primary-soft/70', 'dark:to-black', 'from-black/10', 'via-black/7', 'to-white');
               
               if (glidingDot) {
                 const htmlItem = item as HTMLElement;
