@@ -7,10 +7,12 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const homePath = lang === 'en' ? '/en' : '/es';
 import '../styles/global.css';
+import { ThemeScript } from 'astro-theme-toggle/components';
 ---
 <!doctype html>
 <html lang={lang} class="scroll-smooth min-h-dvh bg-linear-to-tl from-gray-50 to-gray-150 dark:from-black dark:to-gray-950">
     <head>
+        <ThemeScript />
         <script is:inline>
             //Detectar tema del navegador
             if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
