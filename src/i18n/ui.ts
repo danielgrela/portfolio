@@ -48,6 +48,9 @@ export const ui = {
     'proyectos.highlights.title': 'Highlights (Cancelled mobile project)',
     'proyectos.highlights.description': 'Cancelled mobile application project in Expo to practice React Native and Nativewind. The repository contains an unfinished state of the project, without many unfinished features, but with the base code and Firebase rules so that it can be cloned and checked its status. Entering the article extends the explanation of the project and its current state.',
     'proyectos.highlights.link': 'Read article',
+    'proyectos.sayon.title': 'Sayon',
+    'proyectos.sayon.description': 'Sayon is a Landing Page commissioned by my girlfriend for her university project. The project was made with Astro, Tailwind CSS and JavaScript, and is hosted on GitHub with all the code available. The page seeks to simulate a landing page of a mobile application that facilitates the use of mobile phones for the elderly and those with difficulties.',
+    'proyectos.sayon.link': 'View page',
 
     //Blog
     'ResumirIA.title': 'Summarize with:',
@@ -112,6 +115,9 @@ export const ui = {
     'proyectos.highlights.title': 'Highlights (Proyecto móvil cancelado)',
     'proyectos.highlights.description': 'Proyecto cancelado de aplicación móvil en Expo para practicar React Native y Nativewind. El repositorio contiene un estado inacabado del proyecto, sin muchas funcionalidades inacabadas, pero con el código base y las reglas de Firebase para que se pueda clonar y comprobar su estado. Entrando en el artículo se extiende la explicación del proyecto y su estado actual.',
     'proyectos.highlights.link': 'Leer artículo',
+    'proyectos.sayon.title': 'Sayon',
+    'proyectos.sayon.description': 'Sayon es una Landing Page encargada por mi novia para su proyecto universitario. El proyecto se hizo con Astro, Tailwind CSS y JavaScript, y se encuentra alojado en GitHub con todo el código disponible. La página busca simular una landing page de una aplicación móvil que facilita el uso de los telefonos móviles para la gente mayor y con dificultades.',
+    'proyectos.sayon.link': 'Ver página',
     
     //Contacto
     'contacto.title': '¿Quieres contactarme?',

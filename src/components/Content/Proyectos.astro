@@ -2,6 +2,7 @@
 import mockupPortfolioLight from "../../assets/mockups/mockupportfoliolight.jpg";
 import mockupPortfolioDark from "../../assets/mockups/mockupportfoliodark.jpg";
 import mockupphones from "../../assets/mockups/mockupphones.jpg";
+import sayon from "../../assets/mockups/sayon.jpg";
 import ProyectoCard from "./ProyectoCard.astro";
 import Pill from "../Pill.astro";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
@@ -12,6 +13,20 @@ const t = useTranslations(lang);
 <section id="Proyectos" class="w-full wrap-break-word overflow-hidden text-start">
     <h2 class="text-2xl xl:text-3xl font-bold mb-4">{t('proyectos.title')}</h2>
     <ol class="relative mx-5 gap-6 flex flex-col">  
+        <ProyectoCard 
+            src={sayon} 
+            title={t('proyectos.sayon.title')}
+            description={t('proyectos.sayon.description')}
+            linkRepo="https://github.com/danielgrela/sayon"
+            linkProyecto="https://sayon-delta.vercel.app/"
+            textoProyecto={t('proyectos.sayon.link')}
+        >
+        <div class="flex flex-row justify-start gap-2 flex-wrap">
+            <Pill>Astro</Pill>
+            <Pill>Tailwind CSS</Pill>
+            <Pill>JavaScript</Pill>
+        </div>
+        </ProyectoCard>
         <ProyectoCard 
             srcLight={mockupPortfolioLight}
             srcDark={mockupPortfolioDark}
