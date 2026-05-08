@@ -4,14 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "host": "astro dev --host",
-    "build": "astro build",
+    "host": "astro host",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^6.2.2",
+    "astro-theme-toggle": "^0.8.0",
     "flowbite": "^4.0.1",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
