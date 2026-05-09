@@ -1,6 +1,6 @@
 ---
-import mockupPortfolioLight from "../../assets/mockups/mockupportfoliolight.jpg";
-import mockupPortfolioDark from "../../assets/mockups/mockupportfoliodark.jpg";
+import PortfolioLight from "../../assets/mockups/portfoliolight.jpg";
+import PortfolioDark from "../../assets/mockups/portfoliodark.jpg";
 import mockupphones from "../../assets/mockups/mockupphones.jpg";
 import sayon from "../../assets/mockups/sayon.jpg";
 import ProyectoCard from "./ProyectoCard.astro";
@@ -28,8 +28,8 @@ const t = useTranslations(lang);
         </div>
         </ProyectoCard>
         <ProyectoCard 
-            srcLight={mockupPortfolioLight}
-            srcDark={mockupPortfolioDark}
+            srcLight={PortfolioLight}
+            srcDark={PortfolioDark}
             title={t('proyectos.portfolio.title')}
             description={t('proyectos.portfolio.description')}
             linkProyecto="https://github.com/danielgrela/portfolio"
