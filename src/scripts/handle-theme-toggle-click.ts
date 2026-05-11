@@ -56,7 +56,7 @@ async function startCircleAnimation(
   await transition?.ready
   void transition?.finished?.then(removeTemporaryStyles)
 
-  const gradientOffset = 0.7
+  const gradientOffset = 0.95
   const maskSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><defs><radialGradient id="toggle-theme-gradient"><stop offset="${gradientOffset}"/><stop offset="1" stop-opacity="0"/></radialGradient></defs><circle cx="4" cy="4" r="4" fill="url(#toggle-theme-gradient)"/></svg>`
   const maskUrl = `data:image/svg+xml;base64,${window.btoa(maskSvg)}`
 
