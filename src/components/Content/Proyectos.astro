@@ -4,6 +4,7 @@ import PortfolioDark from "../../assets/mockups/portfoliodark.jpg";
 import mockupphones from "../../assets/mockups/mockupphones.jpg";
 import sayon from "../../assets/mockups/sayon.jpg";
 import ProyectoCard from "./ProyectoCard.astro";
+import BetterUrjcCalendar from "../../assets/mockups/betterurjccalendar.jpg";
 import Pill from "../Pill.astro";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
@@ -14,20 +15,34 @@ const t = useTranslations(lang);
     <h2 class="text-2xl xl:text-3xl font-bold mb-4">{t('proyectos.title')}</h2>
     <ol class="relative mx-5 gap-6 flex flex-col">  
         <ProyectoCard 
-            src={sayon} 
-            title={t('proyectos.sayon.title')}
-            description={t('proyectos.sayon.description')}
-            linkRepo="https://github.com/danielgrela/sayon"
-            linkProyecto="https://sayon-delta.vercel.app/"
-            textoProyecto={t('proyectos.sayon.link')}
+        src={BetterUrjcCalendar} 
+        title={t('proyectos.betterurjccalendar.title')}
+        description={t('proyectos.betterurjccalendar.description')}
+        linkRepo="https://github.com/danielgrela/betterurjccalendar"
+        linkProyecto="https://betterurjccalendar.danielgrela.com/"
+        textoProyecto={t('proyectos.betterurjccalendar.link')}
         >
         <div class="flex flex-row justify-start gap-2 flex-wrap">
-            <Pill>Astro</Pill>
+            <Pill>React</Pill>
             <Pill>Tailwind CSS</Pill>
             <Pill>JavaScript</Pill>
         </div>
-        </ProyectoCard>
-        <ProyectoCard 
+    </ProyectoCard>
+    <ProyectoCard 
+        src={sayon} 
+        title={t('proyectos.sayon.title')}
+        description={t('proyectos.sayon.description')}
+        linkRepo="https://github.com/danielgrela/sayon"
+        linkProyecto="https://sayon-delta.vercel.app/"
+        textoProyecto={t('proyectos.sayon.link')}
+    >
+    <div class="flex flex-row justify-start gap-2 flex-wrap">
+        <Pill>Astro</Pill>
+        <Pill>Tailwind CSS</Pill>
+        <Pill>JavaScript</Pill>
+    </div>
+    </ProyectoCard>
+    <ProyectoCard 
             srcLight={PortfolioLight}
             srcDark={PortfolioDark}
             title={t('proyectos.portfolio.title')}

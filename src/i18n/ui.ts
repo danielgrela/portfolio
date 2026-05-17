@@ -48,6 +48,9 @@ export const ui = {
     'proyectos.highlights.title': 'Highlights (Cancelled mobile project)',
     'proyectos.highlights.description': 'Cancelled mobile application project in Expo to practice React Native and Nativewind. The repository contains an unfinished state of the project, without many unfinished features, but with the base code and Firebase rules so that it can be cloned and checked its status. Entering the article extends the explanation of the project and its current state.',
     'proyectos.highlights.link': 'Read article',
+    'proyectos.betterurjccalendar.title': 'Better URJC Calendar',
+    'proyectos.betterurjccalendar.description': 'Better URJC Calendar es una aplicación web para mejorar la experiencia de los estudiantes de la Universidad Rey Juan Carlos con su calendario académico.',
+    'proyectos.betterurjccalendar.link': 'View page',
     'proyectos.sayon.title': 'Sayon',
     'proyectos.sayon.description': 'Sayon is a Landing Page commissioned by my girlfriend for her university project. The project was made with Astro, Tailwind CSS and JavaScript, and is hosted on GitHub with all the code available. The page seeks to simulate a landing page of a mobile application that facilitates the use of mobile phones for the elderly and those with difficulties.',
     'proyectos.sayon.link': 'View page',
@@ -118,7 +121,10 @@ export const ui = {
     'proyectos.sayon.title': 'Sayon',
     'proyectos.sayon.description': 'Sayon es una Landing Page encargada por mi novia para su proyecto universitario. El proyecto se hizo con Astro, Tailwind CSS y JavaScript, y se encuentra alojado en GitHub con todo el código disponible. La página busca simular una landing page de una aplicación móvil que facilita el uso de los telefonos móviles para la gente mayor y con dificultades.',
     'proyectos.sayon.link': 'Ver página',
-    
+    'proyectos.betterurjccalendar.title': 'Better URJC Calendar',
+    'proyectos.betterurjccalendar.description': 'Better URJC Calendar es una aplicación web para mejorar la experiencia de los estudiantes de la Universidad Rey Juan Carlos con su calendario académico.',
+    'proyectos.betterurjccalendar.link': 'Ver página',
+
     //Contacto
     'contacto.title': '¿Quieres contactarme?',
     'contacto.form.asunto.title': 'Asunto',
